@@ -339,6 +339,7 @@
           box-shadow: 0 0 16px 0 #ccc;
   display: none;
   padding: 20px;
+  z-index: 10;
 }
 
 .search-nav .Layout .search-left div:nth-child(2) .recom-city ul {
@@ -539,5 +540,134 @@
   display: inline-block;
   margin-right: 20px;
   overflow: hidden;
+}
+
+.nav-class {
+  background-color: #01c07f;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.nav-class .nav-class-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-class .nav-class-first > li i {
+  display: inline-block;
+  width: 13px;
+  height: 6px;
+  margin-left: 5px;
+  background-position: -2px -150px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  background-image: url(../images/head-tubiao.png);
+  background-repeat: no-repeat;
+}
+
+.nav-class .nav-class-first > li:hover i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.nav-class .nav-class-first > li:hover {
+  font-weight: 700;
+}
+
+.nav-class .nav-class-first li:nth-child(1) {
+  display: block;
+  width: 100%;
+  width: 50px;
+  text-align: center;
+  background-color: #43d093;
+}
+
+.nav-sevrice {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+
+.nav-sevrice ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #666666;
+  width: 800px;
+}
+
+.nav-sevrice li:nth-child(1) {
+  font-size: 16px;
+  color: #555555;
+}
+
+.nav-sevrice li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  height: 20px;
+  width: 2px;
+  border: 1px solid #00bf63;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-sevrice .sevrice-wifi i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/nav-sevrice-tubiao.png);
+  background-repeat: no-repeat;
+  background-position: -760px -223px;
+}
+
+.nav-sevrice .sevrice-play i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/nav-sevrice-tubiao.png);
+  background-repeat: no-repeat;
+  background-position: -517px -64px;
+}
+
+.nav-sevrice .sevrice-Plane i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/nav-sevrice-tubiao.png);
+  background-repeat: no-repeat;
+  background-position: -276px -226px;
+}
+
+.nav-sevrice .sevrice-Hotel i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/nav-sevrice-tubiao.png);
+  background-repeat: no-repeat;
+  background-position: -35px -150px;
 }
 /*# sourceMappingURL=index.css.map */

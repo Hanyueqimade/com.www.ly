@@ -336,6 +336,7 @@
                 box-shadow: 0 0 16px 0 #ccc;
                 display: none;
                 padding: 20px;
+                z-index: 10;
 
                 ul {
                     display: flex;
@@ -552,10 +553,149 @@
                     }
                 }
             }
+        }
+    }
+}
 
+
+.nav-class {
+    background-color: #01c07f;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 16px;
+
+    .nav-class-first {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+
+        &>li {
+
+            i {
+                display: inline-block;
+                width: 13px;
+                height: 6px;
+                margin-left: 5px;
+                background-position: -2px -150px;
+                vertical-align: middle;
+                margin-bottom: 2px;
+                background-image: url(../images/head-tubiao.png);
+                background-repeat: no-repeat;
+
+            }
+
+            &:hover i {
+
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+
+        li:nth-child(1) {
+            display: block;
+            width: 100%;
+            width: 50px;
+            text-align: center;
+            background-color: #43d093;
+        }
+    }
+}
+
+.nav-sevrice {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    // background-color: red;
+
+    ul {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        color: #666666;
+        width: 800px;
+    }
+
+    li:nth-child(1) {
+        font-size: 16px;
+        color: #555555;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 16px;
+            top: 10px;
+            height: 20px;
+            width: 2px;
+            border: 1px solid #00bf63;
+            box-sizing: border-box;
+        }
+    }
+
+    .sevrice-wifi {
+        i {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            // margin-top: 10px;
+            background-image: url(../images/nav-sevrice-tubiao.png);
+            background-repeat: no-repeat;
+            background-position: -760px -223px;
         }
 
 
-
     }
+
+    .sevrice-play {
+        i {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            // margin-top: 10px;
+            background-image: url(../images/nav-sevrice-tubiao.png);
+            background-repeat: no-repeat;
+            background-position: -517px -64px;
+        }
+    }
+
+
+    .sevrice-Plane {
+        i {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            // margin-top: 10px;
+            background-image: url(../images/nav-sevrice-tubiao.png);
+            background-repeat: no-repeat;
+            background-position: -276px -226px;
+        }
+    }
+
+    .sevrice-Hotel {
+        i {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            // margin-top: 10px;
+            background-image: url(../images/nav-sevrice-tubiao.png);
+            background-repeat: no-repeat;
+            background-position: -35px -150px;
+            ;
+        }
+    }
+
 }
