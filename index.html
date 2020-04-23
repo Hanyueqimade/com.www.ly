@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>同程艺龙</title>
 </head>
+
 <link rel="stylesheet" href="./lib/normalize.css">
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/index.css">
@@ -709,13 +710,12 @@
             </ul>
         </div>
     </nav>
-
     <nav class="nav-place">
         <a href="Javascript:;"><img src="./images/nav-place-bg.jpg" alt=""></a>
         <div class="Layout">
             <div class="nav-place-left">
                 <ul class="nav-place-leftl">
-                    <li><a href="Javascript:;">机票</a></li>
+                    <li class="nav-place-leftl-tap"><a href="Javascript:;">机票</a></li>
                     <li><a href="Javascript:;">火车票</a></li>
                     <li><a href="Javascript:;">酒店</a></li>
                     <li><a href="Javascript:;">景点</a></li>
@@ -726,12 +726,13 @@
                 </ul>
                 <ul class="nav-place-leftr">
                     <li class="leftr-one">
-                        <div class="jipiao">
-                            <span class="leftr-one-name">国内机票
-                                <i class="leftr-one-gre"></i>
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name others">国内机票
+                                <!-- <i class="leftr-one-gre"></i> -->
                             </span>
-                            <span>国际机票<i></i></span>
-                        </div>
+                            <span class="other">国际机票<i></i></span>
+                        </h3>
+
                         <div class="leftr-one-domestic">
                             <dl class="leftr-one-Choice">
                                 <dt>行程类型</dt>
@@ -757,7 +758,7 @@
                                         class="input02" holder="城市名" nulltips="请输入出发城市名称" value="城市名" focusnow="false"
                                         style="color: rgb(204, 204, 204);">
                                 </li>
-                                <div>
+                                <div class="wangfan">
 
                                 </div>
                                 <li>
@@ -789,7 +790,7 @@
                         </div>
 
 
-                        <div class="leftr-one-international none">
+                        <div s class="leftr-one-international  none">
                             <dl class="leftr-one-Choice">
                                 <dt>行程类型</dt>
                                 <dd>
@@ -814,7 +815,7 @@
                                         class="input02" holder="城市名" nulltips="请输入出发城市名称" value="城市名" focusnow="false"
                                         style="color: rgb(204, 204, 204);">
                                 </li>
-                                <div>
+                                <div class="">
 
                                 </div>
                                 <li>
@@ -842,12 +843,43 @@
                             <div class="leftr-one-dates">
                                 <div class="leftr-one-date">
                                     <p>乘客类型</p>
-                                    <div>
+                                    <div class="Passenger">
                                         <span>1</span>
                                         成人
                                         <span>0</span>
                                         儿童
+                                        <div class="Passenger-list none">
+                                            <div class="tishi tishs none">
+                                                <p>每名成人最多可携带2名儿童，如有特殊需求，请提交<a href="Javascript:;">机票需求单</a>。</p>
+                                            </div>
+                                            <div class="tishi tish none">
+                                                <p>乘客总数不可大于9人，如有特殊需求，请提交<a href="Javascript:;">机票需求单</a>。</p>
+                                            </div>
+                                            <div class="Adult">
+                                                <span>成人数</span>
+                                                <div class="com_spinner" id="nrnd_ainput">
+                                                    <a class="decrease disabled"></a>
+                                                    <input type="text" value="1" maxlength="1" name="sel_inAdult">
+                                                    <a class="increase"></a>
+                                                </div>
+                                            </div>
+                                            <div class="children">
+                                                <span>儿童数</span>
+                                                <div class="com_spinner" id="nrnd_cinput">
+                                                    <a class="decrease disabled"></a>
+                                                    <input type="text" value="0" maxlength="1" name="sel_inChild">
+                                                    <a class="increase"></a>
+                                                </div>
+                                                <em style="color: #999;margin-left: 3px;font-size: 12px;">2-12岁</em>
+                                            </div>
+                                            <div class="panel_btns">
+                                                <a class="panel_btn" id="nrnd_ensure">确认</a>
+                                            </div>
+
+                                        </div>
                                     </div>
+
+
                                 </div>
                                 <div class="leftr-one-date ">
                                     <p>舱位等级</p>
@@ -861,12 +893,6 @@
                                             <li data-value="F">头等舱</li>
                                         </ul>
                                     </div>
-                                    <!-- <select style='outline:medium;''>
-                                    <option value="经济/超级经济舱" selected='selected'>经济/超级经济舱</option>
-                                    <option value="公务舱/头等舱">公务舱/头等舱</option>
-                                    <option value="公务舱">公务舱</option>
-                                    <option value="头等舱">头等舱</option>
-                                    </select> -->
                                 </div>
                             </div>
 
@@ -877,30 +903,978 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li> -->
+                    <li class="leftr-one none">
+                        <ul class="leftr-one-city">
+                            <li>
+                                <p>出发城市</p>
+                                <input type="text" maxlength="20" id="txtAirplaneCity1" name="OrgPort" class="input02"
+                                    holder="城市名" nulltips="请输入出发城市名称" value="城市名" focusnow="false"
+                                    style="color: rgb(204, 204, 204);">
+                            </li>
+                            <div>
+
+                            </div>
+                            <li>
+                                <p>到达城市</p>
+                                <input type="text" maxlength="20" id="txtAirplaneCity1" name="OrgPort" class="input02"
+                                    holder="城市名" nulltips="请输入出发城市名称" value="城市名" focusnow="false"
+                                    style="color: rgb(204, 204, 204);">
+                            </li>
+                        </ul>
+                        <div class="leftr-one-dates">
+                            <div class="leftr-one-date">
+                                <p>出发日期</p>
+                                <input type="text" id="txtAirplaneTime1" name="dtGoDate" class="input02" holder="时间/日期"
+                                    nulltips="请选择出发日期" value="2020-04-25" style="color: rgb(204, 204, 204);"
+                                    focusnow="false">
+                            </div>
+                        </div>
+                        <label for="checkGcd" class="set_default">
+                            <input id="checkGcd" type="checkbox">
+                            <em id="setDef " class="setDef"></em>
+                            <span>只搜高铁/动车</span>
+                        </label>
+                        <div class="leftr-one-button ">
+                            <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                style="display: inline-block;">
+                        </div>
+
+                    </li>
+                    <li class="leftr-one none">
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name">国内酒店</span>
+                            <span>海外酒店</span>
+                        </h3>
+
+                        <div class="leftr-three-inner ">
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="北京"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <span>搜索历史<em></em></span>
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>入住日期</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="2020-04-23"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>离店日期</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="2020-04-24"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>关键字</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder='输入 位置 酒店名 或品牌' class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+                        </div>
+                        <div class="leftr-three-outer none">
+                            <div class="none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>入住日期</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="2020-04-23"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>离店日期</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="2020-04-24"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>关键字</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder='输入 位置 酒店名 或品牌' class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="leftr-one none">
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name">景点</span>
+                            <span>酒店+景点</span>
+                            <span>周边跟团游</span>
+                        </h3>
+
+                        <div class="leftr-three-outer ">
+                            <div class="none">
+
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+                            <h4>精选主题</h4>
+                            <ul>
+                                <li>水上世界</li>
+                                <li>主题乐园</li>
+                                <li>自然风光</li>
+                                <li>更多主题</li>
+                            </ul>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>苏州</li>
+                                <li>常州</li>
+                                <li>无锡</li>
+                                <li>南京</li>
+                                <li>扬州</li>
+                                <a>更多<em></em></a>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none">
+                            <div class="none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="酒店名、景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热搜关键词</h4>
+                            <ul class="two-resou">
+                                <li>灵山大佛</li>
+                                <li>横店影视城</li>
+                                <li>常州中华恐龙园</li>
+                                <!-- <li>东部华侨城</li> -->
+
+                            </ul>
+                            <i>东部华侨城</i>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>杭州</li>
+                                <li>常州</li>
+                                <li>绍兴</li>
+                                <li>无锡</li>
+                                <li>深圳</li>
+                                <li>广州</li>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none">
+                            <div class=" none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>苏州</li>
+                                <li>上海</li>
+                                <li>南京</li>
+                                <li>无锡</li>
+                                <li>杭州</li>
+                            </ul>
+                            <h4>热门活动</h4>
+                            <ul>
+                                <li>灵山大佛</li>
+                                <li>普陀山</li>
+                                <li>武隆</li>
+                                <li>周庄</li>
+                                <li>兵马俑</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftr-one none">
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name">酒店+景点</span>
+                            <span>周边跟团游</span>
+                            <span>景点</span>
+                        </h3>
+
+
+
+                        <div class="leftr-three-outer ">
+                            <div class="none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="酒店名、景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热搜关键词</h4>
+                            <ul class="two-resou">
+                                <li>灵山大佛</li>
+                                <li>横店影视城</li>
+                                <li>常州中华恐龙园</li>
+                                <!-- <li>东部华侨城</li> -->
+
+                            </ul>
+                            <i>东部华侨城</i>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>杭州</li>
+                                <li>常州</li>
+                                <li>绍兴</li>
+                                <li>无锡</li>
+                                <li>深圳</li>
+                                <li>广州</li>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none">
+                            <div class=" none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>苏州</li>
+                                <li>上海</li>
+                                <li>南京</li>
+                                <li>无锡</li>
+                                <li>杭州</li>
+                            </ul>
+                            <h4>热门活动</h4>
+                            <ul>
+
+                                <li>普陀山</li>
+                                <li>珠海长隆</li>
+                                <li>横店</li>
+                                <li>八达岭</li>
+                                <li>快乐大巴</li>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none ">
+                            <div class="none">
+
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>关键词</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="景点名或城市名" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+                            <h4>精选主题</h4>
+                            <ul>
+
+                                <li>主题乐园</li>
+                                <li>温泉</li>
+                                <li>滑雪</li>
+                                <li>名胜古迹</li>
+                            </ul>
+                            <h4>热搜城市</h4>
+                            <ul>
+                                <li>苏州</li>
+                                <li>常州</li>
+                                <li>无锡</li>
+                                <li>南京</li>
+                                <li>扬州</li>
+                                <a>更多<em></em></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftr-one none">
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name">全部</span>
+                            <span>跟团游</span>
+                            <span>自由行</span>
+                        </h3>
+
+
+
+                        <div class="leftr-three-outer ">
+                            <div class="none">
+
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>出发地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="苏州" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="请输入目的地、主题或关键词" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热门活动</h4>
+
+                            <h4>热门目的地</h4>
+                            <ul>
+                                <li>三亚</li>
+                                <li>云南</li>
+                                <li>厦门</li>
+                                <li>哈尔滨</li>
+                                <li>北京</li>
+                                <li>桂林</li>
+                            </ul>
+                            <ul>
+                                <li>张家界</li>
+                                <li>九寨沟</li>
+                                <li>西安</li>
+                                <li>杭州</li>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none">
+                            <div class=" none">
+
+                            </div>
+
+
+                            <div class="leftr-three-inner-one">
+                                <p>出发地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="苏州" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="请输入目的地、主题或关键词" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热门活动</h4>
+
+                            <h4>热门目的地</h4>
+                            <ul>
+                                <li>三亚</li>
+                                <li>云南</li>
+                                <li>厦门</li>
+                                <li>哈尔滨</li>
+                                <li>北京</li>
+                                <li>桂林</li>
+                            </ul>
+                            <ul>
+                                <li>张家界</li>
+                                <li>九寨沟</li>
+                                <li>西安</li>
+                                <li>杭州</li>
+                            </ul>
+                        </div>
+
+                        <div class="leftr-three-outer none ">
+                            <div class="none">
+
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>出发地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="苏州" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value=""
+                                            placeholder="请输入目的地、主题或关键词" class="input02 color-normal autofill_empty"
+                                            name="txtHotelCity1" cityid="0" cid="53" ctype="" labelid="0"
+                                            id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+                            <h4>热门活动</h4>
+
+                            <h4>热门目的地</h4>
+                            <ul>
+                                <li>苏州</li>
+                                <li>厦门</li>
+                                <li>丽江</li>
+                                <li>长白山</li>
+                                <li>桂林</li>
+                                <li>西安</li>
+                            </ul>
+                            <ul>
+                                <li>张家界</li>
+                                <li>成都</li>
+                                <li>北京</li>
+                                <li>广东</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftr-one none">
+                        <h3 class="jipiao">
+                            <span class="leftr-one-name">跟团游</span>
+                            <span>自由行</span>
+                            <span>签证</span>
+                            <span>玩乐WiFi</span>
+                        </h3>
+
+
+
+                        <div class="leftr-three-outer ">
+                            <div class="none">
+
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>出发地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="苏州" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="日本" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热门活动</h4>
+                            <ul>
+                                <li>出境定制</li>
+                            </ul>
+                            <h4>热搜目的地</h4>
+
+                        </div>
+
+                        <div class="leftr-three-outer none">
+                            <div class="none">
+
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>出发地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="苏州" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="日本" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热门活动</h4>
+                            <ul>
+
+                            </ul>
+                            <h4>热搜目的地</h4>
+
+                        </div>
+
+                        <div class="leftr-three-outer none ">
+                            <div class="none">
+
+                            </div>
+                            <div class="none">
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="日本" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+
+                            <h4>热门目的地</h4>
+                            <ul>
+                                <li>美国</li>
+                                <li>加拿大</li>
+                                <li>英国</li>
+                                <li>德国</li>
+                                <li>意大利</li>
+                            </ul>
+                            <ul>
+                                <li>新加坡</li>
+                                <li>越南</li>
+                                <li>澳大利亚</li>
+                                <li>柬埔寨</li>
+                                <li>日本</li>
+                            </ul>
+                            <ul>
+                                <li>泰国</li>
+                                <li>马来西亚</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="leftr-three-outer none ">
+                            <div class="none">
+
+                            </div>
+                            <div class="none">
+                            </div>
+                            <div class="leftr-three-inner-one">
+                                <p>目的地</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="香港" placeholder=""
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+
+
+                            <h4>热门活动</h4>
+                            <ul>
+                                <li>香港迪士尼</li>
+                                <li>新加坡环球影城</li>
+                                <li>东京塔</li>
+                            </ul>
+                            <ul>
+                                <li>清迈动物园</li>
+                                <li>日本wifi</li>
+                                <li>泰国HAPPY卡</li>
+                            </ul>
+                            <h4>热门目的地</h4>
+                            <ul>
+                                <li>芽庄</li>
+                                <li>巴厘岛</li>
+                                <li>美国</li>
+                                <li>香港</li>
+                                <li>东京</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftr-one none">
+                        <div class="leftr-three-outer">
+
+                            <div class="none">
+
+                            </div>
+                            <div class="leftr-three-inner-one " style="width:315px">
+                                <p>邮轮航线</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="" placeholder="不限"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one" style="width:315px">
+                                <p>出发城市</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="" placeholder="不限"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+
+                            <div class="leftr-three-inner-one" style="width:315px">
+                                <p>邮轮公司</p>
+                                <ul>
+                                    <li>
+                                        <input type="text" maxlength="20" autocomplete="off" value="" placeholder="不限"
+                                            class="input02 color-normal autofill_empty" name="txtHotelCity1" cityid="0"
+                                            cid="53" ctype="" labelid="0" id="txtHotelCity1">
+                                    </li>
+                                </ul>
+                                <!-- <span>搜索历史<em></em></span> -->
+                            </div>
+                            <div class="leftr-one-button" style="margin-top: 20px;">
+                                <input class="search_submit" type="button" id="airplaneSubmit" value="搜 索"
+                                    style="display: inline-block;">
+                            </div>
+                            <h4>热门活动</h4>
+                            <h4>热搜目的地</h4>
+                            <ul>
+                                <li>地中海</li>
+                                <li>东南亚</li>
+                                <li>日本</li>
+                            </ul>
+
+                        </div>
+
+                    </li>
                 </ul>
             </div>
-
-
 
             <div class="nav-place-right">
                 <a href=""><img src="./images/lunbo-right.png" alt=""></a>
             </div>
 
         </div>
+    </nav>
+
+    <main>
+        <!-- 版心 -->
+        <div class="Layout">
+            <!-- 特惠优选 -->
+            <div class="Preferential">
+                <div class="Preferential-top">
+                    <h1>精选特惠</h1>
+                    <ul>
+                        <li class="Preferential-top-tap">热门推荐</li>
+                        <li>周边跟团</li>
+                        <li>境内游</li>
+                        <li>出境游</li>
+                        <li>邮轮</li>
+                    </ul>
+                </div>
+                <div class="Preferential-bottom">
+                    <ul>
+                        <li class="Preferential-first">
+                            <ul>
+                                <li class="Preferential-first-big">
+                                    <a href="JavaScript:;" title="曼谷+芭堤雅+沙美岛6或7日跟团游">
+                                        <img src="./images/Preferential-first-01.jpg.webp" alt="">
+                                    </a>
+                                    <div>
+
+                                    </div>
+                                    <h3>
+                                        <p>曼谷+芭堤雅+沙美岛6或7日跟团游</p>
+                                        <span>出境游·无锡出发</span>
+                                    </h3>
+                                    <p><span>￥</span><em>3599</em>起</p>
+
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;" title="曼谷+芭提雅+沙美岛5晚7日半自助游">
+                                        <img src="./images/Preferential-first-02.jpg.webp" alt="">
+                                    </a>
+
+                                    <p>曼谷+芭提雅+沙美岛5晚7日半自助游</p>
+                                    <div>
+                                        <i></i><i></i>
+                                    </div>
+
+                                    <p class="Preferential-bottom-price"><span>￥</span><em>3199</em>起</p>
+
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;" title="非凡系列-新西兰南北岛11日游-2800人出游真实点评打造超级爆款-出游首推跟团游">
+                                        <img src="./images/Preferential-first-03.jpg.webp" alt="">
+                                    </a>
+                                    <p class="Preferential-bottom-price"><span>￥</span><em>3199</em>起</p>
+                                </li>
+                                <li>
+                                    <a href="JavaScript:; ">
+                                        <img src="./images/Preferential-first-04.jpg.webp" alt="">
+                                    </a>
+                                    <p class="Preferential-bottom-price"><span>￥</span><em>3199</em>起</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="JavaScript:;">
+                                        <img src="./images/Preferential-first-05.jpg.webp" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;">
+                                        <img src="./images/Preferential-first-06.jpg.webp" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;">
+                                        <img src="./images/Preferential-first-07.jpg.webp" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;">
+                                        <img src="./images/Preferential-first-08.jpg.webp" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="JavaScript:;">
+                                        <img src="./images/Preferential-first-09.jpg.webp" alt="">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- <li >
+                            <ul>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                                <li><a href="JavaScript:;"></a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
 
 
 
+            </div>
         </div>
 
 
-    </nav>
+    </main>
+
+
     <script src="./lib/jquery-3.4.1.min.js"></script>
     <script src="./js/index.js"></script>
 </body>

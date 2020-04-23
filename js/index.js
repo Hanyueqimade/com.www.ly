@@ -91,40 +91,27 @@ $(('.nav-class-first li')).hover(function () {
 // nav-place 第三部分
 
 // 机票切换
-$('.jipiao span').click(function () {
+$('.jipiao>span').click(function () {
     $(this).addClass('leftr-one-name').siblings().removeClass('leftr-one-name')
-    $(this).find('i').addClass('leftr-one-gre')
-    $(this).find('i').parent().siblings().find('i').removeClass('leftr-one-gre')
-    // console.log($(this).find('i').parent().siblings().find('i'));
+
 })
 
-// $('.jipiao span').hover(function () {
-//     $(this).css({
-//         'color': '#ff5d3d',
-//         "zIndex": 1
-//     })
-// }, function () {
-//     $(this).siblings().css({
-//         'color': '#666666',
-//         // "zIndex": 1
-//     })
+
+$('.jipiao>span').click(function () {
+    let index = $(this).index()
+
+    $(this).parent().parent().children('div').eq(index).show().siblings('div').hide()
+
+})
+
+// $('.other').click(function () {
+//     $(this).parent().parent().addClass('leftr-one-other')
+
 // })
+// $('.others').click(function () {
+//     $(this).parent().parent().removeClass('leftr-one-other')
 
-$('.jipiao span:nth-child(1)').click(function () {
-    $('.leftr-one-domestic').show()
-    $('.leftr-one-international').hide()
-})
-
-$('.jipiao span:nth-child(2)').click(function () {
-    $('.leftr-one-domestic').hide()
-    $('.leftr-one-international').show()
-    $('.leftr-one').css({
-        'height': '410px',
-        'backgroundColor': 'white',
-        'zIndex': '2'
-    })
-
-})
+// })
 
 // 小圆点选择切换
 $('.leftr-one-Choice s').click(function () {
@@ -169,6 +156,14 @@ $('.leftr-one-international .second').click(function () {
     $('.pcol p').css('color', '#666666')
 })
 
+//wangfan
+
+$('.leftr-one-city>div').hover(function () {
+    $(this).addClass('wangfan')
+}, function () {
+    $(this).removeClass('wangfan')
+})
+
 
 // 机票舱位等级
 
@@ -183,9 +178,140 @@ $('.cabintype_list li').click(function () {
     $('.cabintype span').html(content)
 })
 
+// 机票 下拉
+$('.Passenger span').click(function () {
+    $('.Passenger-list').toggle()
+})
+
+
+// 机票 人数
+
+$(".Adult .decrease").click(function () {
+    // let num = $('.Passenger>span:nth-child(1)').html()
+    let num = $(this).next().val()
+    num--
+    if (num <= 1) {
+        num = 1
+        $('.Adult .decrease').next().val(num)
+        $(".Adult .decrease").addClass('disabled')
+    } else if (num < 9) {
+        $('.tish').hide()
+        $(".Adult .increase").removeClass('disableds')
+    }
+    $(this).next().val(num)
+    let newnum = $(this).next().val()
+    $('.Passenger>span:nth-child(1)').html(newnum)
+})
+
+$(".Adult .increase").click(function () {
+
+    // var num = +$('.Passenger>span:nth-child(1)').html()
+    let num = $(this).prev().val()
+    num++
+    let Num = +$('.Passenger span:nth-child(2)').html()
+    // if (num+Num >= 9) {
+
+
+    // }
+    if (num + Num > 9) {
+        num = 9 - Num
+        $('.tish').show()
+        $('.Adult .increase').prev().val(num)
+        $(".Adult .increase").addClass('disableds')
+        $(".children .increase").addClass('disableds')
+
+    } else if (num >= 1) {
+        $(".Adult .decrease").removeClass('disabled')
+    } else {
+        $('.tish').hide()
+    }
+    $(this).prev().val(num)
+    let newnum = $(this).prev().val()
+
+    $('.Passenger>span:nth-child(1)').html(newnum)
+
+    // console.log(newnum);
+
+})
+
+
+$(".children .decrease").click(function () {
+    // let num = $('.Passenger>span:nth-child(1)').html()
+    let num = $(this).next().val()
+    num--
+    let Num = +$('.Passenger span:nth-child(1)').html()
+    if (num + Num < 9) {
+        $('.tish').hide()
+    }
+
+    let nums = $('.Adult .increase').prev().val() * 2
+    if (num <= 0) {
+        num = 0
+        $('.children .decrease').next().val(num)
+        $(".children .decrease").addClass('disabled')
+    } else if (num < nums) {
+        $('.tishs').hide()
+        $(".children .increase").removeClass('disableds')
+    }
+    $(this).next().val(num)
+    let newnum = $(this).next().val()
+    $('.Passenger>span:nth-child(2)').html(newnum)
+})
+
+$(".children .increase").click(function () {
+
+    // var num = +$('.Passenger>span:nth-child(1)').html()
+    let num = $(this).prev().val()
+    num++
+    let Num = +$('.Passenger span:nth-child(1)').html()
+    if (num + Num > 9) {
+        num = 9 - Num
+        $('.tish').show()
+        // $('.Adult .increase').prev().val(num)
+        $(".Adult .increase").addClass('disableds')
+        $(".children .increase").addClass('disableds')
+    }
+    let nums = $('.Adult .increase').prev().val() * 2
+
+    if (num >= nums) {
+        // num = nums / 2
+        $('.tishs').show()
+        $(".Adult .decrease").addClass('disabled')
+
+    }
+
+    if (num >= nums) {
+
+        num = nums
+        // num = $('.Adult .increase').prev().val(num)*2
+        $('.children .increase').prev().val(num)
+        $(".children .increase").addClass('disableds')
+    } else if (num > 0) {
+        $(".children .decrease").removeClass('disabled')
+    }
+
+    $(this).prev().val(num)
+    let newnum = $(this).prev().val()
+    $('.Passenger>span:nth-child(2)').html(newnum)
+
+    // console.log(newnum);
+
+})
+
+
+//火车票勾选
+$(".setDef").click(function () {
+    $(this).toggleClass('setDef-s')
+})
 
 
 
 
 
+//左侧切换
 
+$('.nav-place-leftl li').click(function () {
+    $(this).addClass('nav-place-leftl-tap').siblings().removeClass('nav-place-leftl-tap')
+    let index = $(this).index()
+    $('.nav-place-leftr>li').eq(index).show().siblings().hide()
+})
