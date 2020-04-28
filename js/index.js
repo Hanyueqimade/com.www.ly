@@ -315,3 +315,165 @@ $('.nav-place-leftl li').click(function () {
     let index = $(this).index()
     $('.nav-place-leftr>li').eq(index).show().siblings().hide()
 })
+
+
+
+// main
+// 特惠优选
+// tap切换
+$(".Preferential>.Preferential-top>ul li").mouseover(function () {
+    $(this).addClass('Preferential-top-tap').siblings().removeClass('Preferential-top-tap')
+    let index = $(this).index()
+    $('.Preferential-bottom>ul>li').eq(index).stop().show(100).siblings().stop().hide(100)
+})
+
+//酒店 tap切换
+
+$(".Hotel>.Preferential-top>ul li").mouseover(function () {
+    $(this).addClass('Preferential-top-tap').siblings().removeClass('Preferential-top-tap')
+    let index = $(this).index()
+    $('.Hotel-botton-left>ul>li').eq(index).stop().show(50).siblings().stop().hide(50)
+    $('.Hotel-botton-right>ul>li').eq(index).stop().show(50).siblings().stop().hide(50)
+})
+
+// 周边切换
+
+$(".around>.Preferential-top>ul li").mouseover(function () {
+    $(this).addClass('Preferential-top-tap').siblings().removeClass('Preferential-top-tap')
+    let index = $(this).index()
+    $('.around-bottom>div').eq(index).stop().show(100).siblings('div').stop().hide(100)
+})
+
+// 游中国切换
+
+$(".China>.Preferential-top>ul>li").mouseover(function () {
+    $(this).addClass('Preferential-top-tap').siblings().removeClass('Preferential-top-tap')
+    let index = $(this).index()
+    $('.fu>ul>li').eq(index).stop().show(50).siblings().stop().hide(50)
+    $('.qi>ul>li').eq(index).stop().show(50).siblings().stop().hide(50)
+})
+
+
+// 游世界
+$(".world>.Preferential-top>ul li").mouseover(function () {
+    $(this).addClass('Preferential-top-tap').siblings().removeClass('Preferential-top-tap')
+    let index = $(this).index()
+    $('.world-bottom>ul>li').eq(index).stop().show(100).siblings('').stop().hide(100)
+})
+
+
+// 旅游局合作
+
+$('#Tourism>.tour-02>li').mouseover(function () {
+    $(this).addClass('current').siblings().removeClass('current')
+    let index = $(this).index()
+    $('#Tourism>.tour-01>li').eq(index).stop().fadeIn(1000).siblings().stop().fadeOut()
+})
+
+$('#Insurance>.Insurance-s>li').mouseover(function () {
+    $(this).addClass('current').siblings().removeClass('current')
+    let index = $(this).index()
+    $('#Insurance>.Insurance-f>li').eq(index).stop().fadeIn(1000).siblings().stop().fadeOut()
+})
+
+$('.xz>em').click(function () {
+    $(this).parent().next().slideToggle(500)
+    $(this).toggleClass('xuanzhuan')
+})
+
+
+// 楼梯导航
+let floorone = $('.Preferential').offset().top - 100
+let floortwo = $('.Hotel').offset().top - 140
+let floorthree = $('.Scenic-spot').offset().top - 160
+let floorfour = $('.around').offset().top - 150
+let floorfifty = $('.China').offset().top - 150
+let floorsix = $('.world').offset().top - 260
+let floorseven = $('.strategy').offset().top - 200
+let flooreight = $('.travel').offset().top
+
+// console.log(floorone, floortwo, floorthree, floorfour, floorfifty, floorsix, floorseven, flooreight, floornine);
+$(document).scroll(function () {
+    if ($(document).scrollTop() >= floorone && $(document).scrollTop() <= flooreight + 200) {
+        $('.document-left').show()
+    } else {
+        $('.document-left').hide()
+    }
+
+    if ($(document).scrollTop() >= floorone) {
+        $('.document-left li').eq(0).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floortwo) {
+        $('.document-left li').eq(1).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floorthree) {
+        $('.document-left li').eq(2).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floorfour) {
+        $('.document-left li').eq(3).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floorfifty) {
+        $('.document-left li').eq(4).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floorsix) {
+        $('.document-left li').eq(5).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= floorseven) {
+        $('.document-left li').eq(6).addClass('colo').siblings().removeClass('colo')
+    }
+    if ($(document).scrollTop() >= flooreight - 300) {
+        $('.document-left li').eq(7).addClass('colo').siblings().removeClass('colo')
+    }
+})
+
+// $('.document-left li').click(function () {
+//     let index = $(this).index()
+//     $(this).addClass('colo').siblings().removeClass('colo')
+//     $('.document-left li').eq(8).removeClass('colo')
+// })
+
+$('.document-left li').eq(0).click(function () {
+    $(document).scrollTop(floorone)
+})
+$('.document-left li').eq(1).click(function () {
+    $(document).scrollTop(floortwo)
+})
+$('.document-left li').eq(2).click(function () {
+    $(document).scrollTop(floorthree)
+})
+$('.document-left li').eq(3).click(function () {
+    $(document).scrollTop(floorfour)
+})
+$('.document-left li').eq(4).click(function () {
+    $(document).scrollTop(floorfifty)
+})
+$('.document-left li').eq(5).click(function () {
+    $(document).scrollTop(floorsix)
+})
+$('.document-left li').eq(6).click(function () {
+    $(document).scrollTop(floorseven)
+})
+$('.document-left li').eq(7).click(function () {
+    $(document).scrollTop(flooreight)
+})
+
+$(".back,.a-g").click(function () {
+
+    let timer = setInterval(function () {
+        let x = $(document).scrollTop() - 100
+        $(document).scrollTop(x)
+        if (x <= 0) {
+            clearInterval(timer)
+        }
+    }, 10)
+
+})
+
+
+$(document).scroll(function () {
+    if ($(document).scrollTop() >= $('.nav-class').offset().top) {
+        $('.a-g').show()
+    } else {
+        $('.a-g').hide()
+    }
+})
