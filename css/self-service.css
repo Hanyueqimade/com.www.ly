@@ -837,248 +837,122 @@ main {
           box-sizing: border-box;
 }
 
-main .Layout {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .Layout .main-left {
-  width: 192px;
-  height: auto;
-}
-
-main .Layout .main-left > ul {
-  width: 100%;
+main > .Layout {
   height: auto;
   background-color: #fff;
-  padding: 0px 15px;
+  padding: 20px 20px 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-main .Layout .main-left > ul > li {
-  position: relative;
+main > .Layout .help_self {
   width: 100%;
-  height: 40px;
-  line-height: 40px;
   height: auto;
+}
+
+main > .Layout .help_self > div {
+  width: 100%;
+  height: auto;
+}
+
+main > .Layout .help_self > div h2 {
   font-size: 16px;
-  padding-left: 20px;
-  border-bottom: 1px solid #f4f4f4;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
-main .Layout .main-left > ul > li .jiacu {
-  font-weight: 700;
+main > .Layout .help_self > div ul {
+  width: 100%;
+  height: 120px;
 }
 
-main .Layout .main-left > ul > li i {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 0;
-  top: 12px;
-  background: url(../images/sou-btn.png) no-repeat 2px -60px;
-}
-
-main .Layout .main-left > ul > li .daoli {
-  background-position: -82px -60px;
-}
-
-main .Layout .main-left > ul > li ul {
-  width: 192px;
+main > .Layout .help_self > div ul li {
+  position: relative;
+  float: left;
+  width: 150px;
   height: auto;
-  font-size: 14px;
-  line-height: 1.9;
-  margin-left: -35px;
-}
-
-main .Layout .main-left > ul > li ul li {
-  padding-left: 35px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-size: 15px;
   color: #666666;
-}
-
-main .Layout .main-left > ul > li ul li:hover {
-  color: #23beae;
-}
-
-main .Layout .main-right {
-  width: 1090px;
-  height: 800px;
-  background-color: #fff;
-  padding: 30px;
+  margin-right: 5px;
+  padding-left: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  line-height: 1.8;
 }
 
-main .Layout .main-right h5 {
-  margin-left: -10px;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-main .Layout .main-right .main-right-top {
-  height: auto;
-  width: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: 35px;
-  font-size: 16px;
-  border-bottom: 2px solid #f6f6f6;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap li {
-  height: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap .col {
-  font-weight: 700;
-  color: #23beae;
-  border-bottom: 2px solid #23beae;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps {
-  width: 100%;
-  height: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li {
-  width: 100%;
-  height: 100%;
-  padding-left: 30px;
-  padding-top: 25px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul {
-  width: 330px;
-  height: 100%;
-  font-size: 16px;
-  line-height: 3;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li {
-  width: 100%;
-  position: relative;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li i {
+main > .Layout .help_self > div ul li i {
   display: inline-block;
   width: 4px;
   height: 4px;
   border-radius: 4px;
   display: inline-block;
   position: absolute;
-  top: 21px;
-  left: -9px;
+  top: 12px;
+  left: 0px;
   background: #ddd;
 }
 
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li:hover i {
+main > .Layout .help_self > div ul li:hover i {
   background-color: #ff6633;
 }
 
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li:hover {
+main > .Layout .help_self > div ul li:hover {
   color: #ff6633;
 }
 
-main .Layout .main-right .main-right-center {
-  height: 287px;
+main > .Layout .help_self > div:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+main .help_app {
   width: 100%;
-  margin-top: 50px;
+  height: 140px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-main .Layout .main-right .main-right-center h5 {
-  margin-bottom: 0px;
-}
-
-main .Layout .main-right .main-right-center ul {
-  width: 100%;
-  height: 260px;
-  padding-left: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-center ul li {
-  float: left;
-  width: 195px;
-  height: 80px;
-  margin-top: 30px;
-}
-
-main .Layout .main-right .main-right-center ul li p {
-  margin-top: 10px;
-  font-size: 14px;
-  margin-left: 3px;
-}
-
-main .Layout .main-right .main-right-center ul li div {
-  width: 60px;
-  height: 60px;
-}
-
-main .Layout .main-right .main-right-bottom {
-  width: 100%;
-  height: 82px;
-}
-
-main .Layout .main-right .main-right-bottom > div {
-  width: 515px;
-  height: 82px;
-  float: left;
-}
-
-main .Layout .main-right .main-right-bottom > div img {
-  float: left;
-}
-
-main .Layout .main-right .main-right-bottom > div ul {
-  width: 435px;
+main .help_app .Layout {
+  position: relative;
   height: 100%;
-  float: left;
-  padding-left: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-main .Layout .main-right .main-right-bottom > div ul li {
-  width: auto;
-  margin-right: 52px;
-  float: left;
+main .help_app .Layout img {
+  width: 100%;
+  height: 100%;
+}
+
+main .help_app .Layout .app_intro {
+  position: absolute;
+  top: 24px;
+  left: 512px;
+  color: #fff;
+}
+
+main .help_app .Layout .app_intro p {
+  font-size: 16px;
+}
+
+main .help_app .Layout .app_intro h3 {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+  text-shadow: 1px 2px 5px #bb5a4d;
+  margin: 5px 0;
+}
+
+main .help_app .Layout .app_intro ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .help_app .Layout .app_intro ul li {
+  color: #926215;
   font-size: 14px;
-  line-height: 2.5;
-}
-
-main .Layout .main-right .main-right-bottom > div ul li:hover {
-  color: #ff668f;
+  padding: 3px 4px;
+  border: 1px solid #e2ad59;
+  border-radius: 3px;
+  margin: 5px 10px 0 0;
+  background: #e9c183;
 }
 
 footer {
@@ -1291,4 +1165,4 @@ footer .Layout > ul > li:nth-child(1) dl:nth-child(2) p {
 .document-right-bottom ul .a-c:hover {
   background-position: 0px -518px;
 }
-/*# sourceMappingURL=Help-center.css.map */
+/*# sourceMappingURL=self-service.css.map */

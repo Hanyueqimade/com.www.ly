@@ -905,7 +905,6 @@
 }
 
 main {
-
     height: auto;
     width: 100%;
     padding: 20px 0;
@@ -914,252 +913,58 @@ main {
 
     .Layout {
         height: auto;
-        display: flex;
-        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 20px 0 20px;
+        box-sizing: border-box;
 
-        .main-left {
-            width: 192px;
+        .help_service {
+            width: 100%;
             height: auto;
 
-            &>ul {
-                width: 100%;
-                height: auto;
-                background-color: #fff;
-                padding: 0px 15px;
-                box-sizing: border-box;
-
-                &>li {
-                    position: relative;
-                    width: 100%;
-                    height: 40px;
-                    line-height: 40px;
-                    height: auto;
-                    font-size: 16px;
-                    padding-left: 20px;
-                    border-bottom: 1px solid #f4f4f4;
-                    box-sizing: border-box;
-
-                    .jiacu {
-                        font-weight: 700;
-                    }
-
-                    i {
-                        position: absolute;
-                        width: 15px;
-                        height: 15px;
-                        right: 0;
-                        top: 12px;
-                        background: url(../images/sou-btn.png) no-repeat 2px -60px;
-                    }
-
-                    .daoli {
-                        background-position: -82px -60px;
-                    }
-
-
-                    ul {
-                        width: 192px;
-                        height: auto;
-                        font-size: 14px;
-                        // background-color: red;
-                        line-height: 1.9;
-                        margin-left: -35px;
-
-
-                        li {
-                            padding-left: 35px;
-                            // text-align: center;
-                            box-sizing: border-box;
-                            color: #666666;
-                            // overflow: hidden;
-
-                            &:hover {
-                                color: #23beae;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-        .main-right {
-            width: 1090px;
-            height: 800px;
-            background-color: #fff;
-            padding: 30px;
-            box-sizing: border-box;
-
-            h5 {
-                margin-left: -10px;
+            h2 {
+                font-weight: normal;
                 font-size: 16px;
-                margin-bottom: 20px;
+                padding-left: 40px;
+                width: 100%;
+                height: 56px;
+                line-height: 56px;
+                box-sizing: border-box;
+                background: url(../images/smile.png) no-repeat 6px 13px;
+
             }
 
-            .main-right-top {
-                height: auto;
+            ul {
                 width: 100%;
-
-
-
-
-                .main-right-top-tap {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    height: 35px;
-                    font-size: 16px;
-                    // padding: 0 20px;
-                    border-bottom: 2px solid #f6f6f6;
-                    box-sizing: border-box;
-
-                    li {
-                        height: 100%;
-
-
-                    }
-
-                    .col {
-                        font-weight: 700;
-                        color: #23beae;
-                        border-bottom: 2px solid #23beae;
-                    }
-
-                }
-
-                .main-right-top-taps {
-                    width: 100%;
-                    height: 100%;
-
-                    &>li {
-                        width: 100%;
-                        height: 100%;
-                        padding-left: 30px;
-                        padding-top: 25px;
-                        box-sizing: border-box;
-
-                        div {
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-
-                            ul {
-                                width: 330px;
-                                height: 100%;
-                                font-size: 16px;
-                                line-height: 3;
-
-                                li {
-                                    width: 100%;
-                                    position: relative;
-
-                                    i {
-                                        display: inline-block;
-                                        width: 4px;
-                                        height: 4px;
-                                        border-radius: 4px;
-                                        display: inline-block;
-                                        position: absolute;
-                                        top: 21px;
-                                        left: -9px;
-                                        background: #ddd;
-                                    }
-
-                                    &:hover i {
-                                        background-color: #ff6633;
-                                    }
-
-                                    &:hover {
-                                        color: #ff6633;
-                                    }
-                                }
-                            }
-                        }
-
-
-
-
-                    }
-                }
-            }
-
-            .main-right-center {
-                height: 287px;
-                width: 100%;
+                height: 700px;
                 margin-top: 50px;
 
-                // background-color: red;
-                h5 {
-                    margin-bottom: 0px;
-                }
+                li {
+                    width: 254px;
+                    height: 185px;
+                    text-align: center;
+                    float: left;
 
-                ul {
-                    width: 100%;
-                    height: 260px;
-                    padding-left: 30px;
-                    box-sizing: border-box;
-
-                    li {
-                        float: left;
-                        width: 195px;
-                        height: 80px;
-                        margin-top: 30px;
+                    a {
+                        display: block;
+                        width: 100px;
+                        height: auto;
+                        margin: 0 auto;
 
                         p {
                             margin-top: 10px;
                             font-size: 14px;
-                            margin-left: 3px;
+                            color: #333333;
                         }
-
-                        div {
-                            width: 60px;
-                            height: 60px;
-                        }
-
-                    }
-                }
-            }
-
-            .main-right-bottom {
-                width: 100%;
-                height: 82px;
-
-                &>div {
-                    width: 515px;
-                    height: 82px;
-                    float: left;
-
-                    img {
-                        float: left;
-                    }
-
-                    ul {
-                        width: 435px;
-                        height: 100%;
-                        float: left;
-                        padding-left: 20px;
-                        // padding-top: 10px;
-                        box-sizing: border-box;
-
-                        li {
-                            width: auto;
-                            margin-right: 52px;
-                            float: left;
-                            font-size: 14px;
-                            line-height: 2.5;
-
-                            &:hover {
-                                color: #ff668f;
-                            }
+                        &:hover{
+                            transform: translateY(-10px);
+                            transition: all 0.2s;
                         }
                     }
                 }
             }
         }
     }
-
 }
-
 
 footer {
     width: 100%;

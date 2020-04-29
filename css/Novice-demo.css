@@ -839,6 +839,63 @@ main {
 
 main .Layout {
   height: auto;
+}
+
+main .Layout .hotel_process,
+main .Layout .flight_process,
+main .Layout .scene_process,
+main .Layout .dujia_process,
+main .Layout .zby_process {
+  width: 100%;
+  height: 280px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+main .Layout .hotel_process > h5,
+main .Layout .flight_process > h5,
+main .Layout .scene_process > h5,
+main .Layout .dujia_process > h5,
+main .Layout .zby_process > h5 {
+  width: 100%;
+  margin: 20px auto;
+  padding-left: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../images/Novice.png);
+  background-repeat: no-repeat;
+}
+
+main .Layout .hotel_process > h5 span,
+main .Layout .flight_process > h5 span,
+main .Layout .scene_process > h5 span,
+main .Layout .dujia_process > h5 span,
+main .Layout .zby_process > h5 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+main .Layout .hotel_process > h5 em,
+main .Layout .flight_process > h5 em,
+main .Layout .scene_process > h5 em,
+main .Layout .dujia_process > h5 em,
+main .Layout .zby_process > h5 em {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+main .Layout .hotel_process > ul,
+main .Layout .flight_process > ul,
+main .Layout .scene_process > ul,
+main .Layout .dujia_process > ul,
+main .Layout .zby_process > ul {
+  width: 100%;
+  height: 160px;
+  padding: 0 160px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -847,238 +904,82 @@ main .Layout {
           justify-content: space-between;
 }
 
-main .Layout .main-left {
-  width: 192px;
-  height: auto;
-}
-
-main .Layout .main-left > ul {
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  padding: 0px 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-left > ul > li {
+main .Layout .hotel_process > ul > li,
+main .Layout .flight_process > ul > li,
+main .Layout .scene_process > ul > li,
+main .Layout .dujia_process > ul > li,
+main .Layout .zby_process > ul > li {
   position: relative;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  height: auto;
-  font-size: 16px;
-  padding-left: 20px;
-  border-bottom: 1px solid #f4f4f4;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-left > ul > li .jiacu {
-  font-weight: 700;
-}
-
-main .Layout .main-left > ul > li i {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 0;
-  top: 12px;
-  background: url(../images/sou-btn.png) no-repeat 2px -60px;
-}
-
-main .Layout .main-left > ul > li .daoli {
-  background-position: -82px -60px;
-}
-
-main .Layout .main-left > ul > li ul {
-  width: 192px;
-  height: auto;
-  font-size: 14px;
-  line-height: 1.9;
-  margin-left: -35px;
-}
-
-main .Layout .main-left > ul > li ul li {
-  padding-left: 35px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #666666;
-}
-
-main .Layout .main-left > ul > li ul li:hover {
-  color: #23beae;
-}
-
-main .Layout .main-right {
-  width: 1090px;
-  height: 800px;
-  background-color: #fff;
-  padding: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right h5 {
-  margin-left: -10px;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-main .Layout .main-right .main-right-top {
-  height: auto;
-  width: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: 35px;
-  font-size: 16px;
-  border-bottom: 2px solid #f6f6f6;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap li {
   height: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-tap .col {
-  font-weight: 700;
-  color: #23beae;
-  border-bottom: 2px solid #23beae;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps {
-  width: 100%;
-  height: 100%;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li {
-  width: 100%;
-  height: 100%;
-  padding-left: 30px;
-  padding-top: 25px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul {
-  width: 330px;
-  height: 100%;
-  font-size: 16px;
-  line-height: 3;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li {
-  width: 100%;
-  position: relative;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li i {
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  display: inline-block;
-  position: absolute;
-  top: 21px;
-  left: -9px;
-  background: #ddd;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li:hover i {
-  background-color: #ff6633;
-}
-
-main .Layout .main-right .main-right-top .main-right-top-taps > li div ul li:hover {
-  color: #ff6633;
-}
-
-main .Layout .main-right .main-right-center {
-  height: 287px;
-  width: 100%;
-  margin-top: 50px;
-}
-
-main .Layout .main-right .main-right-center h5 {
-  margin-bottom: 0px;
-}
-
-main .Layout .main-right .main-right-center ul {
-  width: 100%;
-  height: 260px;
-  padding-left: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .Layout .main-right .main-right-center ul li {
-  float: left;
-  width: 195px;
-  height: 80px;
-  margin-top: 30px;
-}
-
-main .Layout .main-right .main-right-center ul li p {
-  margin-top: 10px;
-  font-size: 14px;
-  margin-left: 3px;
-}
-
-main .Layout .main-right .main-right-center ul li div {
-  width: 60px;
-  height: 60px;
-}
-
-main .Layout .main-right .main-right-bottom {
-  width: 100%;
-  height: 82px;
-}
-
-main .Layout .main-right .main-right-bottom > div {
-  width: 515px;
-  height: 82px;
-  float: left;
-}
-
-main .Layout .main-right .main-right-bottom > div img {
-  float: left;
-}
-
-main .Layout .main-right .main-right-bottom > div ul {
-  width: 435px;
-  height: 100%;
-  float: left;
+  width: 160px;
   padding-left: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #ccc;
+  background: url(../images/Novice-li-bg.png) no-repeat 0 10px;
 }
 
-main .Layout .main-right .main-right-bottom > div ul li {
-  width: auto;
-  margin-right: 52px;
-  float: left;
+main .Layout .hotel_process > ul > li:hover,
+main .Layout .flight_process > ul > li:hover,
+main .Layout .scene_process > ul > li:hover,
+main .Layout .dujia_process > ul > li:hover,
+main .Layout .zby_process > ul > li:hover {
+  background-position: 0 -145px;
+}
+
+main .Layout .hotel_process > ul > li::before,
+main .Layout .flight_process > ul > li::before,
+main .Layout .scene_process > ul > li::before,
+main .Layout .dujia_process > ul > li::before,
+main .Layout .zby_process > ul > li::before {
+  content: attr(step-num);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 50px;
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+  color: #fff;
+  font-style: italic;
+}
+
+main .Layout .hotel_process > ul > li h5,
+main .Layout .flight_process > ul > li h5,
+main .Layout .scene_process > ul > li h5,
+main .Layout .dujia_process > ul > li h5,
+main .Layout .zby_process > ul > li h5 {
+  margin: 30px 0 15px 0;
+  font-size: 18px;
+  color: #35ba9e;
+}
+
+main .Layout .hotel_process > ul > li p,
+main .Layout .flight_process > ul > li p,
+main .Layout .scene_process > ul > li p,
+main .Layout .dujia_process > ul > li p,
+main .Layout .zby_process > ul > li p {
+  margin-bottom: 8px;
   font-size: 14px;
-  line-height: 2.5;
 }
 
-main .Layout .main-right .main-right-bottom > div ul li:hover {
-  color: #ff668f;
+.hotel_process > h5 {
+  background-position: 605px 0;
+}
+
+.flight_process > h5 {
+  background-position: 605px -82px;
+}
+
+.scene_process > h5 {
+  background-position: 605px -152px;
+}
+
+.dujia_process > h5 {
+  background-position: 605px -229px;
+}
+
+.zby_process > h5 {
+  background-position: 605px -316px;
 }
 
 footer {
@@ -1291,4 +1192,4 @@ footer .Layout > ul > li:nth-child(1) dl:nth-child(2) p {
 .document-right-bottom ul .a-c:hover {
   background-position: 0px -518px;
 }
-/*# sourceMappingURL=Help-center.css.map */
+/*# sourceMappingURL=Novice-demo.css.map */

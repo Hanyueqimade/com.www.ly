@@ -96,17 +96,25 @@ $('.sousuo input').on('blur', function () {
 
 $('.main-left>ul>li').click(function () {
     $(this).children('ul').toggleClass().prev().toggleClass('jiacu').prev().toggleClass('daoli')
-    
+
+})
+
+
+// tap切换
+$('.main-right-top-tap>li').click(function () {
+    let index = $(this).index()
+    $(this).addClass('col').siblings().removeClass('col')
+    $(".main-right-top-taps>li").eq(index).show().siblings().hide()
 })
 
 
 
-$(document).scroll(function () {
-    if ($(document).scrollTop() >= $('.nav-class').offset().top) {
-        $('.a-g').show()
-    } else {
-        $('.a-g').hide()
-    }
+$(".main-right-center li>div").hover(function () {
+    $(this).find('img').eq(0).hide()
+    $(this).find('img').eq(1).show()
+}, function () {
+    $(this).find('img').eq(1).hide()
+    $(this).find('img').eq(0).show()
 })
 
 
@@ -120,4 +128,12 @@ $(".back,.a-g").click(function () {
         }
     }, 10)
 
+})
+
+$(document).scroll(function () {
+    if ($(document).scrollTop() >= $('.nav-class').offset().top) {
+        $('.a-g').show()
+    } else {
+        $('.a-g').hide()
+    }
 })
