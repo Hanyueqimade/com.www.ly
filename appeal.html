@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="./lib/normalize.css">
 <link rel="stylesheet" href="./css/common.css">
-<link rel="stylesheet" href="./css/Online Service.css">
+<link rel="stylesheet" href="./css/appeal.css">
 
 <body>
     <header>
@@ -698,8 +698,8 @@
                 <li>帮助首页</li>
                 <li>新手演示</li>
                 <li>自助服务</li>
-                <li class="yangshi">在线客服</li>
-                <li>人工申诉</li>
+                <li>在线客服</li>
+                <li class="yangshi">人工申诉</li>
                 <li>账号申诉</li>
                 <li>客户端下载</li>
             </ul>
@@ -711,113 +711,109 @@
 
     <main>
         <div class="Layout">
-            <div class="help_service">
-                <h2>亲爱的用户，请选择您要咨询的服务类型，我们的客服专员将会及时解决您的问题</h2>
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-01.png" alt="">
-                            <p>景点</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-02.png" alt="">
-                            <p>国内酒店</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-03.png" alt="">
-                            <p>国际酒店</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-04.png" alt="">
-                            <p>港澳台酒店</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-05.png" alt="">
-                            <p>国内机票</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-06.png" alt="">
-                            <p>国际机票</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-07.png" alt="">
-                            <p>火车票</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-08.png" alt="">
-                            <p>周边跟团游</p>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                        <img src="./images/Online Service-09.png" alt="">
-                            <p>国内游</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="./images/Online Service-10.png" alt="">
-                            <p>出境跟团游</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="./images/Online Service-11.png" alt="">
-                            <p>处境自由行</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-12.png" alt="">
-                            <p>邮轮</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-13.png" alt="">
-                            <p>汽车票/船票</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-14.png" alt="">
-                            <p>海外玩乐</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-15.png" alt="">
-                            <p>签证</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./images/Online Service-16.png" alt="">
-                            <p>理财</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="./images/Online Service-17.png" alt="">
-                            <p>程程白条</p>
-                        </a>
-                    </li>
-                </ul>
+            <div id="helpContent" class="clearfix">
+            
+                <div class="advice_form">
+                    <dl class="dl_type">
+                        <dt><em>*</em>申诉类型：</dt>
+                        <dd>
+                            <div class="type_div">
+                                <input type="text" id="feedbackRoleId" readonly="true" value="请选择"
+                                    style="color:#ccc;width:200px ;">
+                                <i></i>
+                                <div class="type_list none">
+                                    <ul>
+                                        <li roleid="180001" data-pid="4" data-channel="hotel">国内酒店</li>
+                                        <li roleid="180027" data-pid="4" data-channel="ghotel">国际酒店</li>
+                                        <li roleid="180002" data-pid="1" data-channel="gnflight">国内机票</li>
+                                        <li roleid="180006" data-pid="13" data-channel="gjflight">国际机票</li>
+                                        <li roleid="180003" data-pid="8" data-channel="scenery">景点</li>
+                                        <li roleid="180004" data-pid="2" data-channel="dujia">出境游</li>
+                                        <li roleid="180005" data-pid="5" data-channel="selftravel">周边自由行</li>
+                                        <li roleid="180014" data-pid="16" data-channel="sence">周边跟团游</li>
+                                        <li roleid="180007" data-pid="9" data-channel="traintickets">火车票</li>
+                                        <li roleid="180008" data-pid="6" data-channel="youlun">邮轮</li>
+                                        <li roleid="180009" data-pid="18" data-channel="bus">汽车票</li>
+                                        <li roleid="180010" data-pid="34" data-channel="yongche">用车</li>
+                                        <li roleid="180012" data-pid="11" data-channel="guonei">国内游</li>
+                                        <li roleid="180022" data-pid="20" data-channel="qianzheng">签证</li>
+                                        <li roleid="180023" data-pid="27" data-channel="tcjinfu">程程白条</li>
+                                        <li roleid="180023" data-pid="85" data-channel="tcjinfu">同同宝</li>
+                                        <li roleid="180013" data-pid="" data-channel="ggsuggestion">其它</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="warn_tip none">请选择申诉类型</span>
+                        </dd>
+                    </dl>
+                    <dl class="dl_ques">
+                        <dt><em>*</em>选择问题：</dt>
+                        <dd>
+                            <!--                         <a href="javascript:void(0)" class="at" attr-type="1">修改手机号</a> -->
+                            <a href="javascript:void(0)" class="at" attr-type="10">订单类问题</a>
+                            <!--                         <a href="javascript:void(0)" attr-tothird="true" attr-type="3">产品类问题</a> -->
+                            <a href="javascript:void(0)" attr-type="9">返现奖金</a>
+                            <a href="javascript:void(0)" attr-type="5">游币类问题</a>
+                            <a href="javascript:void(0)" attr-type="0">其他</a>
+                        </dd>
+                    </dl>
+            
+                    <dev>
+                        <ul class="advice_tip none" id="advice_tip">
+                            <li>若您需要更换您的手机账号，请前往“<a href="//member.ly.com/SecurityCenter/" target="_blank">安全中心</a>”进行手机号更改操作</li>
+                            <li>若您的手机账号不能正常接收短信，请前往“<a href="/newhelp/BindChange.html" target="_blank">账号申诉</a>”页面进入人工更换流程</li>
+                            <li>若您需要进行预订咨询、订单咨询、返现咨询等操作时，请前往“<a href="/newhelp/CustomerService.html" target="_blank">在线客服</a>”页面进行咨询
+                            </li>
+                        </ul>
+                    </dev>
+            
+                    <dl class="dl_record" style="align-items:flex-start;">
+                        <dt><em>*</em>问题描述：</dt>
+                        <dd>
+                            <textarea id="quesRecord" placeholder="请尽量详细描述您的问题，以便同程客服为您提供准确周到的服务（10-200字之间）" maxlength="200"
+                                class="invalid color_ccc"></textarea>
+                            <span class="warn_tip none">请填写问题描述</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>您的姓名：</dt>
+                        <dd>
+                            <input type="text" id="realName">
+                            <span class="warn_tip none">请输入您的姓名</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>手机号码：</dt>
+                        <dd>
+                            <input type="text" id="phoneNum" maxlength="11">
+                            <span class="warn_tip none">请输入手机号码</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>电子邮箱：</dt>
+                        <dd>
+                            <input type="text" id="email">
+                            <span class="warn_tip none">请输入电子邮箱</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>验证码：</dt>
+                        <dd>
+                            <input style="width: 80px;" type="text" id="yzmCode" maxlength="4">
+                            <img class="code_img" id="showCodeImg"
+                                src="/zhuanti/ajaxhandler/ImageCodeHandler.aspx?methodName=CreateImgCode&amp;sessionName=ImgCodeHelper&amp;cookiename=a222">
+                            <a class="change_img" href="javascript:void(0)">换一张</a>
+                            <span class="warn_tip none">请输入验证码</span>
+                        </dd>
+                    </dl>
+                    <dl class="dl_submit">
+                        <dt>&nbsp;</dt>
+                        <dd>
+                            <a id="submitBtn" class="submit_btn" href="javascript:void(0)">提交</a>
+                        </dd>
+                    </dl>
+            
+                </div>
             </div>
 
         </div>
@@ -913,7 +909,7 @@
         </ul>
     </div>
     <script src="./lib/jquery-3.4.1.min.js"></script>
-    <script src="./js/Online Service.js"></script>
+    <script src="./js/appeal.js"></script>
 </body>
 
 </html>
